@@ -1,0 +1,361 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('Pb.jpg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    cursor: pointer;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: rgb(228, 2, 2);
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.hero-btn:hover{
+    border: 1px solid rgb(201, 39, 9);
+    background: rgb(201, 36, 6);
+    transition: .9s;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+
+@media (max-width:1028px) {
+    nav img{
+        width: 90px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    nav img{
+        width: 60px;
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(224, 53, 23);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -202px;
+        text-align: left;
+        z-index: 2;
+        transition: .7s;
+    }
+    nav .fa-solid{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 27px;
+        cursor: pointer;
+        font-weight: 10000;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+   /* ---course-- */
+   .course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+   }
+   h1{
+    font-size: 36px;
+    font-weight: 600;
+   }
+   p{
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(192, 183, 183);
+    line-height: 22px;
+    padding: 10px;
+   }
+
+   .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+   }
+   .course-cl{
+    flex-basis: 31%;
+    background: #f7e4e4a2;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: .5s;
+   }
+   h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 10px 0;
+   }
+   .course-cl:hover{
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.486);
+   }
+
+   @media (max-width: 700px) {
+        .row{
+            display: flex;
+            flex-direction: column;
+        }
+   }
+
+
+   /* -----------Campus------- */
+
+   .campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+   }
+   .campus-cl{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+   }
+   .campus-cl img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+   }
+   .layer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+   }
+   .layer:hover{
+    background: rgba(255, 0, 0, 0.322);
+   }
+   .layer h3{
+    width: 100%;
+    font-weight: 500;
+    font-size: 26px;
+    color: white;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transition: .5s;
+   }
+   .layer:hover h3 {
+    opacity: 1;
+    bottom: 50%;
+   }
+
+   /* ------Facilities------ */
+
+   .facilities{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+   }
+
+   .facilities-cl{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+   }
+   .facilities-cl img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+   }
+   .facilities-cl h3{
+    text-align: left;
+    margin-top: 16px;
+    margin-bottom: 15px;
+   }
+   .facilities-cl p{
+    padding: 0;
+   }
+
+   /* -----testimonials---- */
+
+   .testimonials{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+   }
+   .testimonials-cl{
+    flex-basis: 44%;
+    margin-bottom: 5%;
+    text-align: left;
+    border-radius: 10px;
+    background: rgba(252, 209, 209, 0.342);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-cl img{
+    object-fit: cover;
+    height: 70px;
+    margin-left: 5px;
+    margin-right: 38px;
+    border-radius: 50%;
+}
+.testimonials-cl p {
+    padding: 0;
+}
+.testimonials-cl h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.testimonials-cl i {
+    color: goldenrod;
+} 
+
+
+/* ---------call to action-------  */
+
+.cata {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.692), rgba(0, 0, 0, 0.692)), url('IMG_20220902_094038_930.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cata h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px) {
+    .cata h1{
+        font-size: 24px;
+    }
+}
+
+
+/* --------Footer-------- */
+
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.footer .fa-brands{
+    color: red;
+    padding: 20px 5px;
+    margin: 5px 0;
+}
+.tofe{
+    background-color: rgba(82, 107, 250, 0.692);
+    color: white;
+    width: 98.9%;
+    border-radius: 3px;
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    font-family: 'Playfair Display';
+    font-size: 17px;
+    padding: 8px;
+}
+
+@media(max-width: 700px){
+    .footer p{
+        font-size: 13px;
+    }
+}
+
